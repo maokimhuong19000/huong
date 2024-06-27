@@ -5,14 +5,22 @@ import {
   FaCss3,
   FaFigma,
   FaHtml5,
+  FaJava,
   FaJs,
+  FaPhp,
+  FaPython,
   FaReact,
   FaWordpress,
 } from "react-icons/fa";
 import {
   SiAdobephotoshop,
   SiAdobexd,
+  SiCsharp,
+  SiDart,
+  SiFlutter,
   SiFramer,
+  SiLaravel,
+  SiMysql,
   SiNextdotjs,
 } from "react-icons/si";
 
@@ -31,10 +39,14 @@ export const aboutData = [
           FaHtml5,
           FaCss3,
           FaJs,
-          FaReact,
-          SiNextdotjs,
-          SiFramer,
-          FaWordpress,
+          FaPhp,
+          FaPython,
+          FaJava,
+          SiCsharp,
+          SiMysql,
+          SiLaravel,
+          SiDart,
+          SiFlutter,       
         ],
       },
       {
@@ -43,51 +55,52 @@ export const aboutData = [
       },
     ],
   },
-  {
-    title: "awards",
-    info: [
-      {
-        title: "Webby Awards - Honoree",
-        stage: "2011 - 2012",
-      },
-      {
-        title: "Adobe Design Achievement Awards - Finalist",
-        stage: "2009 - 2010",
-      },
-    ],
-  },
+  // {
+  //   title: "awards",
+  //   info: [
+  //     {
+  //       title: "Webby Awards - Honoree",
+  //       stage: "2011 - 2012",
+  //     },
+  //     {
+  //       title: "Adobe Design Achievement Awards - Finalist",
+  //       stage: "2009 - 2010",
+  //     },
+  //   ],
+  // },
   {
     title: "experience",
     info: [
       {
-        title: "UX/UI Designer - XYZ Company",
-        stage: "2012 - 2023",
+        title: "Junior Graphic Designer - At The Flora",
+        stage: "2021 - 2022",
       },
       {
-        title: "Web Developer - ABC Agency",
-        stage: "2010 - 2012",
+        title: "Internship Web developer - Inklutivity",
+        stage: "Aug-2022 - Dec-2023",
       },
       {
-        title: "Intern - DEF Corporation",
-        stage: "2008 - 2010",
+        title: "Web Developer-Blueprint Technology",
+        stage: "2023 - 2024",
       },
+     
     ],
   },
   {
     title: "credentials",
     info: [
       {
-        title: "Web Development - ABC University, LA, CA",
-        stage: "2011",
+        title: "Management Information System - SETEC INSTITUE",
+        stage: "2020-2024",
       },
       {
-        title: "Computer Science Diploma - AV Technical Institute",
-        stage: "2009",
+        title: "UX/UI Design Course - IT Step Acardemy",
+        stage: "2023",
       },
-      {
-        title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
-        stage: "2006",
-      },
+     ` // {
+      //   title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
+      //   stage: "2006",
+      // },`
     ],
   },
 ];
@@ -129,7 +142,7 @@ const About = () => {
             animate="show"
             className="max-w-[500px] mx-auto xl:mx-0 mb-6 xl:mb-12 px-2 xl:px-0"
           >
-            10 years ago, I begin freelancing as a developer. Since then, I've
+            2 years ago, I begin freelancing as a developer. Since then, I've
             done remote work for agencies, consulted for startups, and
             collabrated on digital products for business and consumer use.
           </motion.p>
@@ -145,7 +158,7 @@ const About = () => {
               {/* experience */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={10} duration={5} />
+                  <CountUp start={0} end={2} duration={10} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Years of experience.
@@ -155,7 +168,7 @@ const About = () => {
               {/* clients */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={250} duration={5} />
+                  <CountUp start={0} end={15} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Satisfied clients.
@@ -165,7 +178,7 @@ const About = () => {
               {/* projects */}
               <div className="relative flex-1 after:w-[1px] after:h-full after:bg-white/10 after:absolute after:top-0 after:right-0">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={650} duration={5} />
+                  <CountUp start={0} end={22} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Finished projects.
@@ -175,7 +188,7 @@ const About = () => {
               {/* awards */}
               <div className="relative flex-1">
                 <div className="text-2xl xl:text-4xl font-extrabold text-accent mb-2">
-                  <CountUp start={0} end={8} duration={5} />
+                  <CountUp start={0} end={4} duration={5} />
                 </div>
                 <div className="text-xs uppercase tracking-[1px] leading-[1.4] max-w-[100px]">
                   Winning awards.
