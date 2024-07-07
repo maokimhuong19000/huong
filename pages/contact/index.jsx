@@ -14,14 +14,38 @@ const Contact = () => {
     const myForm = event.target;
     const formData = new FormData(myForm);
 
-    fetch("/", {
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const number=formData.get("number")
+    const subject = formData.get("subject");
+    const message = formData.get("message");
+
+    const telegramMessage = `
+      New Contact Form Submission:
+      Name: ${name}
+      Email: ${email}
+      Number:${number}
+      Subject: ${subject}
+      Message: ${message}
+    `;
+
+    const botToken = "7124501996:AAGGsuTVcMUXMBI8J4c5HQFI2irY26jucY4";
+    const chatId = "1204310951";
+
+    fetch(`https://api.telegram.org/bot${botToken}/sendMessage`, {
       method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams(formData).toString(),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        chat_id: chatId,
+        text: telegramMessage,
+      }),
     })
-      .then(() => alert("Thank you. I will get back to you ASAP."))
-      .catch((error) => console.log(error))
-      .finally(() => setIsLoading(false));
+    .then(() => {
+      alert("Thank you. I will contact back later.");
+      myForm.reset(); // Clear all text fields
+    })
+    .catch((error) => console.log(error))
+    .finally(() => setIsLoading(false));
   };
 
   return (
@@ -80,6 +104,16 @@ const Contact = () => {
               type="text"
               name="subject"
               placeholder="Subject"
+              className="input"
+              disabled={isLoading}
+              aria-disabled={isLoading}
+              required
+              aria-required
+            />
+            <input
+              type="text"
+              name="number"
+              placeholder="Number Phone"
               className="input"
               disabled={isLoading}
               aria-disabled={isLoading}
