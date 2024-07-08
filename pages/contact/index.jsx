@@ -16,16 +16,16 @@ const Contact = () => {
 
     const name = formData.get("name");
     const email = formData.get("email");
-    const number=formData.get("number")
     const subject = formData.get("subject");
     const message = formData.get("message");
+    const numbp   =formData.get("numbp");
 
     const telegramMessage = `
-      New Contact Form Submission:
+      New Contact Sended:
       Name: ${name}
       Email: ${email}
-      Number:${number}
       Subject: ${subject}
+      Number Phone:${numbp}
       Message: ${message}
     `;
 
@@ -41,8 +41,8 @@ const Contact = () => {
       }),
     })
     .then(() => {
-      alert("Thank you. I will contact back later.");
-      myForm.reset(); // Clear all text fields
+      alert("Thank you. I will contact you back.");
+      myForm.reset(); 
     })
     .catch((error) => console.log(error))
     .finally(() => setIsLoading(false));
@@ -112,8 +112,8 @@ const Contact = () => {
             />
             <input
               type="text"
-              name="number"
-              placeholder="Number Phone"
+              name="numbp"
+              placeholder="Phone Number.."
               className="input"
               disabled={isLoading}
               aria-disabled={isLoading}
