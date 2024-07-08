@@ -15,13 +15,19 @@ import {
 import {
   SiAdobephotoshop,
   SiAdobexd,
+  SiAngular,
+  SiAngularjs,
   SiCsharp,
   SiDart,
   SiFlutter,
   SiFramer,
+  SiKnative,
   SiLaravel,
   SiMysql,
+  SiNativescript,
   SiNextdotjs,
+  SiReact,
+  SiSwift,
 } from "react-icons/si";
 
 import Avatar from "../../components/Avatar";
@@ -44,27 +50,34 @@ export const aboutData = [
           FaJava,
           SiCsharp,
           SiMysql,
-          SiLaravel,
-          SiDart,
-          SiFlutter,       
+          SiLaravel
+        ],
+      },
+      {
+        title: "Mobile Application Development",
+        icons: [
+          SiSwift,
+          SiReact,
+          SiDart, 
+          SiFlutter
         ],
       },
       {
         title: "UI/UX Design",
-        icons: [FaFigma, SiAdobexd, SiAdobephotoshop],
+        icons: [
+          FaFigma, 
+          SiAdobexd, 
+          SiAdobephotoshop
+        ],
       },
     ],
   },
   // {
-  //   title: "awards",
+  //   title: "experience",
   //   info: [
   //     {
-  //       title: "Webby Awards - Honoree",
+  //       title: "Mobile Application Development",
   //       stage: "2011 - 2012",
-  //     },
-  //     {
-  //       title: "Adobe Design Achievement Awards - Finalist",
-  //       stage: "2009 - 2010",
   //     },
   //   ],
   // },
@@ -72,18 +85,17 @@ export const aboutData = [
     title: "experience",
     info: [
       {
-        title: "Junior Graphic Designer - At The Flora",
-        stage: "2021 - 2022",
+        title: "Web Developer-Blueprint Technology",
+        stage: "2023 - 2024",
       },
       {
         title: "Internship Web developer - Inklutivity",
         stage: "Aug-2022 - Dec-2023",
       },
       {
-        title: "Web Developer-Blueprint Technology",
-        stage: "2023 - 2024",
+        title: "Junior Graphic Designer - At The Flora",
+        stage: "2021 - 2022",
       },
-     
     ],
   },
   {
@@ -94,13 +106,13 @@ export const aboutData = [
         stage: "2020-2024",
       },
       {
-        title: "UX/UI Design Course - IT Step Acardemy",
+        title: "Certified ​​UX/UI Design Course - IT Step Acardemy",
         stage: "2023",
       },
-     ` // {
+      // {
       //   title: "Certified Graphic Designer - ABC Institute, Los Angeles, CA",
       //   stage: "2006",
-      // },`
+      // },
     ],
   },
 ];
@@ -133,8 +145,8 @@ const About = () => {
             exit="hidden"
             className="h2"
           >
-            Captivating <span className="text-accent">stories</span> birth
-            magnificent designs.
+            Personal Talent Skill <span className="text-accent">Development</span> and <span className="text-accent"> Designs</span>
+
           </motion.h2>
           <motion.p
             variants={fadeIn("right", 0.4)}
@@ -210,10 +222,9 @@ const About = () => {
             {aboutData.map((item, itemI) => (
               <div
                 key={itemI}
-                className={`${
-                  index === itemI &&
+                className={`${index === itemI &&
                   "text-accent after:w-[100%] after:bg-accent after:transition-all after:duration-300"
-                } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
+                  } cursor-pointer capitalize xl:text-lg relative after:w-8 after:h-[2px] after:bg-white after:absolute after:-bottom-1 after:left-0`}
                 onClick={() => setIndex(itemI)}
               >
                 {item.title}
