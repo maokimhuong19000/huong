@@ -31,8 +31,7 @@ const Services = () => {
               exit="hidden"
               className="mb-4 max-w-[400px] mx-auto lg:mx-0"
             >
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur
-              tempora eligendi, quisquam tempore sint reiciendis.
+             I'm Work Full Time But I have Some Part Time For Freelance work :
             </motion.p>
           </div>
 
