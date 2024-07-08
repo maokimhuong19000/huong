@@ -17,28 +17,29 @@ const serviceData = [
   {
     Icon: RxCrop,
     title: "Branding",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "",
   },
   {
     Icon: RxPencil2,
     title: "Design",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "",
   },
   {
     Icon: RxDesktop,
     title: "Development",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "",
+  },
+  {
+    Icon: RxRocket,
+    title: "UX/UI Design",
+    description: "",
   },
   {
     Icon: RxReader,
     title: "Copywriting",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    description: "",
   },
-  {
-    Icon: RxRocket,
-    title: "SEO",
-    description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-  },
+
 ];
 
 const ServiceSlider = () => {
