@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import ParticlesContainer from "../components/ParticlesContainer";
 import ProjectsBtn from "../components/ProjectsBtn";
 import Avatar from "../components/Avatar";
+import AdSense from "../components/AdSense";
 
 import { fadeIn } from "../variants";
 
@@ -48,6 +49,11 @@ const Home = () => {
           >
             <ProjectsBtn />
           </motion.div>
+          
+          {/* AdSense */}
+          <div className="my-10">
+            <AdSense />
+          </div>
         </div>
       </div>
       
